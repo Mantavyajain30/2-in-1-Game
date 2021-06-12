@@ -1,0 +1,404 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<dos.h>
+void displayArray(int x[])
+{
+int i;
+for(i=1;i<=7;i++)
+{
+ printf("%d\t%d\t%d\n",x[i],x[i+7],x[i+14]);
+}
+}
+int main()
+{
+	int z=0;
+while (1)
+{
+
+char name;
+  char n,m;
+printf("                                                ______________________                      \n\n");
+printf("                                                WELCOME TO 2-IN-1 GAME                      \n");
+printf("                                                ______________________                      \n");
+printf("");
+printf("PRESS Y TO CONTINUE.....");
+scanf("%s",&n);
+printf("\n\n");
+printf("PLEASE ENTER YOUR NAME \n");
+scanf("%s",&name);
+printf("\n\n\n\n\n\n");
+printf("                                       __________________________________________                      \n\n");
+printf("                                       THIS PLATFORM WILL PROVIDE YOU 2 FUN GAMES                        \n");
+printf("                                       __________________________________________                      \n\n");
+printf("                                            1 - 21 CARD TRICK GAME                                   \n\n");
+printf("                                            2 - HANGMAN GAME                                         \n\n");
+
+  int choice;
+  printf("ENTER YOUR CHOICE -- ");
+  scanf("%d",&choice);
+  printf("\n\n");
+  switch(choice)
+  { 
+  	case 1:
+    {
+    printf("                                               __________________                                   \n\n");
+    printf("                                               21-CARD TRICK GAME                                         \n");
+    printf("                                               __________________                                     \n\n");
+    printf("21 CARDS SHOWN BELOW --\n");
+    int i, a[21], b[22], c[22], choice;
+    printf("C-1     C-2     C-3\n");
+	for (i=1;i<=21;)
+	{
+		a[i]=i;
+		i++;
+	}
+	displayArray(a);
+    printf("\n");
+    printf("REMEMBER A NUMBER!!!\n");
+    printf("ENTER THE COLUMN:\n");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+    case 1: printf("C-1     C-2     C-3\n");
+            b[1]=a[8];      b[8]=a[9];      b[15]=a[10];
+            b[2]=a[11];     b[9]=a[12];     b[16]=a[13];
+            b[3]=a[14];     b[10]=a[1];     b[17]=a[2];
+            b[4]=a[3];      b[11]=a[4];     b[18]=a[5];
+            b[5]=a[6];      b[12]=a[7];     b[19]=a[15];
+            b[6]=a[16];     b[13]=a[17];    b[20]=a[18];
+            b[7]=a[19];     b[14]=a[20];    b[21]=a[21];
+            displayArray(b);
+            printf("ENTER THE COLUMN:\n");
+            scanf("%d",&choice);
+            printf("\n");
+            switch(choice)
+            {
+                case 1: printf("C-1     C-2     C-3\n");
+                    c[1]=b[8];      c[8]=b[9];      c[15]=b[10];
+                    c[2]=b[11];     c[9]=b[12];     c[16]=b[13];
+                    c[3]=b[14];     c[10]=b[1];     c[17]=b[2];
+                    c[4]=b[3];      c[11]=b[4];     c[18]=b[5];
+                    c[5]=b[6];      c[12]=b[7];     c[19]=b[15];
+                    c[6]=b[16];     c[13]=b[17];    c[20]=b[18];
+                    c[7]=b[19];     c[14]=b[20];    c[21]=b[21];
+                    displayArray(c);
+                    printf("ENTER THE COLUMN:\n");
+                    scanf("%d",&choice);
+                    printf("\n");
+                    switch(choice)
+                    {
+                        case 1: 
+                            printf("        Your remembered:%d",c[4]);
+                        break;
+                        case 2:
+                            printf("        Your remembered:%d",c[11]);
+                        break;
+                        case 3:
+                            printf("        Your remembered:%d",c[18]);
+                        break;
+
+                    }
+                    break;
+                case 2: printf("C-1     C-2     C-3\n");
+                    c[1]=b[15];      c[8]=b[16];      c[15]=b[17];
+                    c[2]=b[18];     c[9]=b[19];     c[16]=b[20];
+                    c[3]=b[21];     c[10]=b[8];     c[17]=b[9];
+                    c[4]=b[10];      c[11]=b[11];     c[18]=b[12];
+                    c[5]=b[13];      c[12]=b[14];     c[19]=b[1];
+                    c[6]=b[2];     c[13]=b[3];    c[20]=b[4];
+                    c[7]=b[5];     c[14]=b[6];    c[21]=b[7];
+                    displayArray(c);
+                    printf("ENTER THE COLUMN:\n");
+                    scanf("%d",&choice);
+                    printf("\n");
+                    switch(choice)
+                    {
+                        case 1:
+                            printf("        Your remembered:%d",c[4]);
+                        break;
+                        case 2:
+                            printf("        Your remembered:%d",c[11]);
+                        break;
+                        case 3:
+                            printf("        Your remembered:%d",c[18]);
+                        break;
+
+                    }
+                    break;
+                case 3: printf("C-1     C-2     C-3\n");
+                    c[1]=b[1];      c[8]=b[2];      c[15]=b[3];
+                    c[2]=b[4];     c[9]=b[5];     c[16]=b[6];
+                    c[3]=b[7];     c[10]=b[15];     c[17]=b[16];
+                    c[4]=b[17];      c[11]=b[18];     c[18]=b[19];
+                    c[5]=b[20];      c[12]=b[21];     c[19]=b[8];
+                    c[6]=b[9];     c[13]=b[10];    c[20]=b[11];
+                    c[7]=b[12];     c[14]=b[13];    c[21]=b[14];
+                    displayArray(c);
+                    printf("ENTER THE COLUMN:\n");
+                    scanf("%d",&choice);
+                    printf("\n");
+                    switch(choice)
+                    {
+                        case 1:
+                            printf("        Your remembered:%d",c[4]);
+                        break;
+                        case 2:
+                            printf("        Your remembered:%d",c[11]);
+                        break;
+                        case 3:
+                            printf("        Your remembered:%d",c[18]);
+                        break;
+
+                    }
+                    break;
+            }
+            break;
+    case 2: printf("C-1     C-2     C-3\n");
+            b[1]=a[15];      b[8]=a[16];      b[15]=a[17];
+            b[2]=a[18];     b[9]=a[19];     b[16]=a[20];
+            b[3]=a[21];     b[10]=a[8];     b[17]=a[9];
+            b[4]=a[10];      b[11]=a[11];     b[18]=a[12];
+            b[5]=a[13];      b[12]=a[14];     b[19]=a[1];
+            b[6]=a[2];     b[13]=a[3];    b[20]=a[4];
+            b[7]=a[5];     b[14]=a[6];    b[21]=a[7];
+            displayArray(b);
+            printf("ENTER THE COLUMN:\n");
+            scanf("%d",&choice);
+            printf("\n");
+            switch(choice)
+            {
+                case 1: printf("C-1     C-2     C-3\n");
+                    c[1]=b[8];      c[8]=b[9];      c[15]=b[10];
+                    c[2]=b[11];     c[9]=b[12];     c[16]=b[13];
+                    c[3]=b[14];     c[10]=b[1];     c[17]=b[2];
+                    c[4]=b[3];      c[11]=b[4];     c[18]=b[5];
+                    c[5]=b[6];      c[12]=b[7];     c[19]=b[15];
+                    c[6]=b[16];     c[13]=b[17];    c[20]=b[18];
+                    c[7]=b[19];     c[14]=b[20];    c[21]=b[21];
+                    displayArray(c);
+                    printf("ENTER THE COLUMN:\n");
+                    scanf("%d",&choice);
+                    printf("\n");
+                    switch(choice)
+                    {
+                        case 1:
+                            printf("        Your remembered:%d",c[4]);
+                        break;
+                        case 2:
+                            printf("        Your remembered:%d",c[11]);
+                        break;
+                        case 3:
+                            printf("        Your remembered:%d",c[18]);
+                        break;
+
+                    }
+                    break;
+                case 2: printf("C-1     C-2     C-3\n");
+                    c[1]=b[15];      c[8]=b[16];      c[15]=b[17];
+                    c[2]=b[18];     c[9]=b[19];     c[16]=b[20];
+                    c[3]=b[21];     c[10]=b[8];     c[17]=b[9];
+                    c[4]=b[10];      c[11]=b[11];     c[18]=b[12];
+                    c[5]=b[13];      c[12]=b[14];     c[19]=b[1];
+                    c[6]=b[2];     c[13]=b[3];    c[20]=b[4];
+                    c[7]=b[5];     c[14]=b[6];    c[21]=b[7];
+                    displayArray(c);
+                    printf("ENTER THE COLUMN:\n");
+                    scanf("%d",&choice);
+                    printf("\n");
+                    switch(choice)
+                    {
+                        case 1:
+                            printf("        Your remembered:%d",c[4]);
+                        break;
+                        case 2:
+                            printf("        Your remembered:%d",c[11]);
+                        break;
+                        case 3:
+                            printf("        Your remembered:%d",c[18]);
+                        break;
+
+                    }
+                    break;
+                case 3: printf("C-1     C-2     C-3\n");
+                    c[1]=b[1];      c[8]=b[2];      c[15]=b[3];
+                    c[2]=b[4];     c[9]=b[5];     c[16]=b[6];
+                    c[3]=b[7];     c[10]=b[15];     c[17]=b[16];
+                    c[4]=b[17];      c[11]=b[18];     c[18]=b[19];
+                    c[5]=b[20];      c[12]=b[21];     c[19]=b[8];
+                    c[6]=b[9];     c[13]=b[10];    c[20]=b[11];
+                    c[7]=b[12];     c[14]=b[13];    c[21]=b[14];
+                    displayArray(c);
+                    printf("ENTER THE COLUMN:\n");
+                    scanf("%d",&choice);
+                    printf("\n");
+                    switch(choice)
+                    {
+                        case 1:
+                            printf("        Your remembered:%d",c[4]);
+                        break;
+                        case 2:
+                            printf("        Your remembered:%d",c[11]);
+                        break;
+                        case 3:
+                            printf("        Your remembered:%d",c[18]);
+                        break;
+
+                    }
+                    break;
+            }
+            break;
+    case 3: printf("C-1     C-2     C-3\n");
+            b[1]=a[1];      b[8]=a[2];      b[15]=a[3];
+            b[2]=a[4];     b[9]=a[5];     b[16]=a[6];
+            b[3]=a[7];     b[10]=a[15];     b[17]=a[16];
+            b[4]=a[17];      b[11]=a[18];     b[18]=a[19];
+            b[5]=a[20];      b[12]=a[21];     b[19]=a[8];
+            b[6]=a[9];     b[13]=a[10];    b[20]=a[11];
+            b[7]=a[12];     b[14]=a[13];    b[21]=a[14];
+            displayArray(b);
+            printf("ENTER THE COLUMN:\n");
+            scanf("%d",&choice);
+            printf("\n");
+            switch(choice)
+            {
+                case 1: printf("C-1     C-2     C-3\n");
+                    c[1]=b[8];      c[8]=b[9];      c[15]=b[10];
+                    c[2]=b[11];     c[9]=b[12];     c[16]=b[13];
+                    c[3]=b[14];     c[10]=b[1];     c[17]=b[2];
+                    c[4]=b[3];      c[11]=b[4];     c[18]=b[5];
+                    c[5]=b[6];      c[12]=b[7];     c[19]=b[15];
+                    c[6]=b[16];     c[13]=b[17];    c[20]=b[18];
+                    c[7]=b[19];     c[14]=b[20];    c[21]=b[21];
+                    displayArray(c);
+                    printf("ENTER THE COLUMN:\n");
+                    scanf("%d",&choice);
+                    printf("\n");
+                    switch(choice)
+                    {
+                        case 1:
+                            printf("        Your remembered:%d",c[4]);
+                        break;
+                        case 2:
+                            printf("        Your remembered:%d",c[11]);
+                        break;
+                        case 3:
+                            printf("        Your remembered:%d",c[18]);
+                        break;
+
+                    }
+                    break;
+                case 2: printf("C-1     C-2     C-3\n");
+                    c[1]=b[15];      c[8]=b[16];      c[15]=b[17];
+                    c[2]=b[18];      c[9]=b[19];     c[16]=b[20];
+                    c[3]=b[21];      c[10]=b[8];     c[17]=b[9];
+                    c[4]=b[10];      c[11]=b[11];     c[18]=b[12];
+                    c[5]=b[13];      c[12]=b[14];     c[19]=b[1];
+                    c[6]=b[2];      c[13]=b[3];    c[20]=b[4];
+                    c[7]=b[5];      c[14]=b[6];    c[21]=b[7];
+                    displayArray(c);
+                    printf("ENTER THE COLUMN:\n");
+                    scanf("%d",&choice);
+                    printf("\n");
+                    switch(choice)
+                    {
+                        case 1:
+                            printf("        Your remembered:%d",c[4]);
+                        break;
+                        case 2:
+                            printf("        Your remembered:%d",c[11]);
+                        break;
+                        case 3:
+                            printf("        Your remembered:%d",c[18]);
+                        break;
+
+                    }
+                    break;
+                case 3: printf("C-1     C-2     C-3\n");
+                    c[1]=b[1];      c[8]=b[2];      c[15]=b[3];
+                    c[2]=b[4];      c[9]=b[5];     c[16]=b[6];
+                    c[3]=b[7];      c[10]=b[15];     c[17]=b[16];
+                    c[4]=b[17];     c[11]=b[18];     c[18]=b[19];
+                    c[5]=b[20];     c[12]=b[21];     c[19]=b[8];
+                    c[6]=b[9];      c[13]=b[10];    c[20]=b[11];
+                    c[7]=b[12];     c[14]=b[13];    c[21]=b[14];
+                    displayArray(c);
+                    printf("ENTER THE COLUMN:\n");
+                    scanf("%d",&choice);
+                    printf("\n");
+                    switch(choice)
+                    {
+                        case 1:
+                            printf("        Your remembered:%d",c[4]);
+                        break;
+                        case 2:
+                            printf("        Your remembered:%d",c[11]);
+                        break;
+                        case 3:
+                            printf("        Your remembered:%d",c[18]);
+                        break;
+
+                    }
+                    break;
+            }
+            break;
+    }
+
+
+    return 0;
+                       	
+					   }  break;       
+    
+	case 2:
+	       {
+	printf("                                                    ____________                                               \n\n");
+    printf("                                                    HANGMAN GAME                                                 \n");
+    printf("                                                    ____________                                               \n\n");
+		        char answer[128];
+  printf("Enter word to guess: ");
+  fflush(stdout);
+  scanf(" %s", answer);
+  int N = strlen(answer);
+  int mask[N];
+  for (int i=0; i < N; ++i) {
+    mask[i] = 0;
+  }
+  int gameover = 0;
+  while (! gameover) {
+    printf("The word is : ");
+    for(int j=0; j < N; ++j) {
+      if (mask[j]) {
+        printf("%c", answer[j]);
+      }
+      else {
+        printf("*");
+      }
+    }
+    printf("\n");
+    char guess;
+    printf("Letter? ");
+    fflush(stdout);
+    scanf(" %c", &guess);
+    for(int k=0; k < N; ++k) {
+      if (answer[k] == guess) {
+	mask[k] = 1;
+      }
+    }
+    gameover = 1;
+    for(int m = 0; m < N; ++m) {
+      if (!mask[m]) {
+        gameover = 0;
+        break;
+      }
+    }
+  }
+
+  // Print victory message!
+  printf("Victory! The word is \"%s\".\n", answer);
+
+  return 0;    	
+		   } break; 		
+		    
+  }
+}
+}
